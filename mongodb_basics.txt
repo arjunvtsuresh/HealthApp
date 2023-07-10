@@ -1,0 +1,29 @@
+start mongod service
+then start mongodb shell using mongosh command
+
+basic commands:
+1.show dbs
+2.use <db-name>
+3.db.users.insertOne({ name: "John" }) (Here users is a collection and name column is a document)
+4.db.users.find() (used for quering the data)
+
+
+query commands:
+1.db.users.find().limit(2) {limits the result by showing only 2 values}
+2.db.users.find().skip(1).limit(2) {shows 2 result by skiping the first 2 values in collection}
+3.db.users.find().sort({name : 1 }) {sorts by name , if ascending then 1 else -1}
+4. the above command can also be used with various other parameters
+
+complex query commands:
+1. db.users.find({name : {$eq : "Kyle "}})
+""""""""""""""""""""""""" $ne """"""""""""
+
+other complex commands
+1.$exists
+2.$in
+3.$nin
+4.$gt
+5.$gte
+6.$lt
+7.$lte
+
