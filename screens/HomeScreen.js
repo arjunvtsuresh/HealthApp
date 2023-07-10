@@ -7,7 +7,7 @@ function HomeScreen({navigation}) {
 
     const BMIButton=() =>{navigation.navigate('BMI')}
     const YogaBtn = () =>{console.log('Button Pressed')}
-    const MindBtn = () =>{console.log('Button Pressed')}
+    const MindBtn = () =>{navigation.navigate('Mindfullness')}
     const WeightBtn  = () =>{console.log('Button Pressed')}
   return (
     <ImageBackground source={require('../assets/health.jpg')} resizeMethod='auto' resizeMode='cover' style={styles.wrapper}>
