@@ -1,33 +1,51 @@
-import React from 'react'
-import { View , StyleSheet, Text} from 'react-native'
+import React, { useRef, useState } from 'react'
+import { View , StyleSheet, Text,Button} from 'react-native'
 import { Video, ResizeMode } from 'expo-av';
 import output from '../assets/video/video.mp4'
 
 function Mindfullness() {
-const video = React.useRef(null);
+const video = useRef(null);
+const [status , setStatus] = React.useState({});
   return (
-    <View style={styles.card}>
-        <Text style={styles.HeaderText}>Meditation often involves practicing mindfulness, which is the state of 
-            non-judgmental awareness of the present moment. 
-            Mindfulness helps individuals develop a deeper 
-            connection with the present moment, reducing 
-            rumination about the past or worries about the future.
-        </Text>
-        <Text style={styles.BigText}>Tap Video to Meditate</Text>
+    <View style={styles.container}>
+        <View style={styles.textCard}>
+            <Text style={styles.HeaderText}>
+                Meditation often involves practicing mindfulness, 
+                which is the state of non-judgmental awareness of
+                the present moment.
+                Mindfulness helps individuals develop a deeper 
+                connection with the present moment, reducing 
+                rumination about the past or worries about the future.
+            </Text>
+         </View>
         <Video
             ref={video}
             style={styles.video}
             source={output}
             useNativeControls
             resizeMode={ResizeMode.CONTAIN}
+            isLooping
+            onPlaybackStatusUpdate={status => setStatus(() => status)}
+            playInBackground
             
         />
+        <View style={styles.buttons}>
+            <Button
+            title={status.isPlaying ? 'Pause' : 'Play'}
+            onPress={() =>
+                status.isPlaying ? video.current.pauseAsync() : video.current.playAsync()
+            }
+            />
+      </View>
+
+
+
     </View>
   )
 }
 
 const styles = StyleSheet.create({
-    card:{
+    container:{
         flex:1,
         justifyContent:'space-around',
         alignItems:'center',
@@ -42,17 +60,18 @@ const styles = StyleSheet.create({
     },
     HeaderText:{
         fontSize: 20,
-        fontWeight: 'bold',
-        padding : 20,
+        fontWeight: 400,
+        padding : 25,
+        color: 'black',
+
     },
-    BigText:{
-        fontSize: 40,
-        color: "dodgerblue",
-        fontWeight: 900,
-        alignItems: 'center',
-        justifyContent: 'center'
-
+    textCard:{
+        padding: 10,
+        marginLeft: 10,
+        marginRight: 10,
+        borderWidth: 1,
+        borderColor:'black',
+        borderRadius: 10,
     }
-
 })
 export default Mindfullness;

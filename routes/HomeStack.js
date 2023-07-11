@@ -10,7 +10,7 @@ const Stack = createNativeStackNavigator();
 
 const HomeStack = () => {
     return(
-      <NavigationContainer>
+      <NavigationContainer style={styles.navigator}>
         <Stack.Navigator>
           <Stack.Screen
             name="Home"
@@ -29,6 +29,13 @@ const HomeStack = () => {
       </NavigationContainer>
     )
 }
+
+const styles = StyleSheet.create({
+  navigator:{
+    backgroundColor:'black',
+    color: 'black',
+  }
+})
 
 
 export default HomeStack;

@@ -6,7 +6,7 @@ function ButtonElement(props) {
     return (
             <TouchableOpacity style={styles.Button} onPress={props.HandlePress}>
                     <Text style={styles.ButtonText}>{props.title}</Text>
-                    <Image source={{uri:"https://picsum.photos/55" , height:55, width : 55 , backgroundColor : "black"}} />
+                    <Image source={props.icons} />
             </TouchableOpacity>
     );
 }

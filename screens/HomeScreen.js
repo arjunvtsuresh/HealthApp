@@ -16,10 +16,10 @@ function HomeScreen({navigation}) {
               <Text style={{fontSize: 14 , color:'white'}} > Version 1.0</Text>
             </View>
             <View style={styles.FeatureContainer}>
-              <ButtonElement title='Calcualte BMI' HandlePress={BMIButton}/>
-              <ButtonElement title='Yoga Poses' HandlePress={YogaBtn}/>
-              <ButtonElement title='Mindfullness' HandlePress={MindBtn}/>
-              <ButtonElement title='Weight Training' HandlePress={WeightBtn}/>
+              <ButtonElement title='Calcualte BMI' HandlePress={BMIButton} icons={require('../assets/icons/bmi.png')}/>
+              <ButtonElement title='Yoga Poses' HandlePress={YogaBtn} icons={require('../assets/icons/yoga.png')}/>
+              <ButtonElement title='Mindfullness' HandlePress={MindBtn} icons={require('../assets/icons/meditation.png')}/>
+              <ButtonElement title='Weight Training' HandlePress={WeightBtn} icons={require('../assets/icons/weigh.png')}/>
             </View> 
     </ImageBackground>
   )
