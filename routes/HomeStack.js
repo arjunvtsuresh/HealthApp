@@ -5,6 +5,8 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import HomeScreen from '../screens/HomeScreen'
 import BMI from '../screens/BMI'
 import Mindfullness from '../screens/Mindfullness';
+import Yoga from '../screens/Yoga';
+import Weight from '../screens/Weight';
 
 const Stack = createNativeStackNavigator();
 
@@ -22,8 +24,16 @@ const HomeStack = () => {
            component={BMI}
           />
           <Stack.Screen
+            name='Yoga'
+            component={Yoga}
+          />
+          <Stack.Screen
             name='Mindfullness'
             component={Mindfullness}
+          />
+          <Stack.Screen
+            name='Weight'
+            component={Weight}
           />
         </Stack.Navigator>
       </NavigationContainer>

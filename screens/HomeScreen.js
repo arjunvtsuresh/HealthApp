@@ -6,9 +6,9 @@ import ButtonElement from '../components/ButtonElement';
 function HomeScreen({navigation}) {
 
     const BMIButton=() =>{navigation.navigate('BMI')}
-    const YogaBtn = () =>{console.log('Button Pressed')}
+    const YogaBtn = () =>{navigation.navigate('Yoga')}
     const MindBtn = () =>{navigation.navigate('Mindfullness')}
-    const WeightBtn  = () =>{console.log('Button Pressed')}
+    const WeightBtn  = () =>{navigation.navigate('Weight')}
   return (
     <ImageBackground source={require('../assets/health.jpg')} resizeMethod='auto' resizeMode='cover' style={styles.wrapper}>
             <View style={styles.headerContainer}>
