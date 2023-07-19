@@ -2,7 +2,7 @@
 
 ## Preview App on Android (You would need ExpoGo as a prerequisite)
 
-![AndroidQR](./images/health/android_build.png)
+![AndroidQR](./android_build.png)
 
 ## or use the link
 ### [exp://u.expo.dev/update/df35f6f1-f73e-42fc-a676-626444f3d532](exp://u.expo.dev/update/df35f6f1-f73e-42fc-a676-626444f3d532)
@@ -10,7 +10,7 @@
 
 ## Preview App on IOS 
 
-![IosQR](./images/health/apple.png)
+![IosQR](./apple.png)
 
 ### [exp://u.expo.dev/update/df35f6f1-f73e-42fc-a676-626444f3d532](exp://u.expo.dev/update/df35f6f1-f73e-42fc-a676-626444f3d532)
 
