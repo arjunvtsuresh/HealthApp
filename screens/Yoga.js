@@ -1,6 +1,6 @@
 
 import React from 'react'
-import { View, Text, ScrollView , StyleSheet} from 'react-native'
+import { View, Text, ScrollView ,ActivityIndicator, StyleSheet} from 'react-native'
 import InputCard from '../components/InpurCard'
 import Card from '../components/Card'
 import { useState } from 'react'
@@ -12,7 +12,7 @@ function Yoga() {
     const [imagedata , setImagedata] = useState([]);
     const [posename , setPosename] = useState([]);
     const [posedesc , setPosedesc] = useState([]);
-    const [isLoading , setLoading]  = useState([]);
+    const [isLoading , setLoading]  = useState(true);
 
     useEffect(()=>{
         fetchData();
@@ -49,6 +49,7 @@ function Yoga() {
   return (
     <View>
         <ScrollView style={styles.container}>
+        	<ActivityIndicator size="large" animating={isLoading}/>
             <Card Imageuri={imagedata[0]} text={posename[0]} desc={posedesc[0]}/>
             <Card Imageuri={imagedata[1]} text={posename[1]} desc={posedesc[1]}/>
             <Card Imageuri={imagedata[2]} text={posename[2]} desc={posedesc[2]}/>
