@@ -15,7 +15,4 @@
 ### [exp://u.expo.dev/update/df35f6f1-f73e-42fc-a676-626444f3d532](exp://u.expo.dev/update/df35f6f1-f73e-42fc-a676-626444f3d532)
 
 
-## Check Git repository 
-### GitHub Link: [GitHub Application Repository](https://github.com/arjunvtsuresh/HealthApp.git)
-
 Note: This app is in its early stage with lots of bugs and issues, you can report  your issues in github link given above.
