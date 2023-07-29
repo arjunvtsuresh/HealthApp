@@ -18,25 +18,51 @@ function Card(props) {
       let bmi_value = ((weight_curr)/(((height_curr)/100)*((height_curr)/100))).toFixed(2)
       setBmi(bmi => bmi_value);
 
-      if(parseInt(bmi_value)>obese_base){
-        health_val='You are obese';
-        health_ind = 0;
-        setHealth(health=>health_val)
-      }
-      else if(parseInt(bmi_value)<obese_base && parseInt(bmi_value)>healthy_base){
-        health_val = 'You are OverWeight';
-        health_ind= 1;
-        setHealth(health=>health_val)
-      }
-      else if(parseInt(bmi_value)>underweight_base && parseInt(bmi_value)<healthy_base){
-        health_val ='Your are Healthy ';
-        health_ind=2;
-        setHealth(health=>health_val)
-      }
-      else if(parseInt(bmi_value)<underweight_base){
-        health_val='You are Under Weight Improve your Health by Intaking more Calorie Foods'
-        health_ind=3;
-        setHealth(health=>health_val)
+      // if(parseInt(bmi_value)>obese_base){
+      //   health_val='You are obese';
+      //   health_ind = 0;
+      //   setHealth(health=>health_val)
+      // }
+      // else if(parseInt(bmi_value)<obese_base && parseInt(bmi_value)>healthy_base){
+      //   health_val = 'You are OverWeight';
+      //   health_ind= 1;
+      //   setHealth(health=>health_val)
+      // }
+      // else if(parseInt(bmi_value)>underweight_base && parseInt(bmi_value)<healthy_base){
+      //   health_val ='Your are Healthy ';
+      //   health_ind=2;
+      //   setHealth(health=>health_val)
+      // }
+      // else if(parseInt(bmi_value)<underweight_base){
+      //   health_val='You are Under Weight Improve your Health by Intaking more Calorie Foods'
+      //   health_ind=3;
+      //   setHealth(health=>health_val)
+      // }
+
+      switch (true) {
+        case  parseInt(bmi_value)> obese_base:
+          health_val='You are obese';
+          health_ind = 0;
+          setHealth(health=>health_val);
+          break;
+        case parseInt(bmi_value)<obese_base && parseInt(bmi_value)>healthy_base:
+          health_val = 'You are OverWeight';
+          health_ind= 1;
+          setHealth(health=>health_val);
+          break;
+        case parseInt(bmi_value)>underweight_base && parseInt(bmi_value)<healthy_base:
+          health_val ='Your are Healthy ';
+          health_ind=2;
+          setHealth(health=>health_val);
+          break;
+        case parseInt(bmi_value)<underweight_base:
+          health_val='You are Under Weight Improve your Health by Intaking more Calorie Foods'
+          health_ind=3;
+          setHealth(health=>health_val);
+          break;
+        default:
+          health_val="Enter a valid Height and Weight";
+          setHealth(health=>health_val);
       }
   }
 

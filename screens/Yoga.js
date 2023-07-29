@@ -37,7 +37,7 @@ function Yoga() {
             setImagedata(imageurls);
             setPosename(name);
             setPosedesc(desc);
-            setLoading(false);
+            setLoading(false); 
         }
         catch(error){
             console.log('Couldnt Fetch data');
